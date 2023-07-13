@@ -1,0 +1,187 @@
+body {
+    background-color: #ffd166;
+    font-family: 'Lobster', cursive;
+}
+
+.pizza {
+    border: 1px solid black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.small_pizza {
+  background-color: #ef476f;  
+}
+
+.medium_pizza {
+    background-color: #06d6a0;
+}
+
+.large_pizza {
+    background-color: #118ab2;
+}
+
+.contact_us {
+    background-color: #86BACB;
+}
+
+.small_pizza h3 {
+    padding-top: 2.3em;
+}
+
+.medium_pizza h3 {
+    padding-top: 1.2em;
+}
+
+.flexBuyBtns{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.buyBtn {
+    border: 1px solid black;
+    padding: 6px 120px;
+    border-radius: 0.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+}
+
+.cartSection {
+    margin: 1em;
+    background-color: #cdb4db;
+    border: 1px solid black;
+    border-radius: 0.3em;
+}
+
+.cartItem {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cartItem div {
+    border-radius: 50%;
+    width: 20px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.cartItem p {
+    margin: 2px;
+}
+
+.cartArea h2 {
+    text-align: center;
+}
+
+/* .cartArea {
+    text-align: center;
+} */
+
+/* .flexCenter {
+    display:flex;
+    justify-content: center;
+} */
+
+.cartItem {
+    width: 22%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.small p:first-child {
+    margin-right: 22px;
+}
+
+.medium p:first-child {
+    margin-right: 8px;
+}
+
+.large p:first-child {
+    margin-right: 24px;
+}
+
+.small p:last-child, .medium p:last-child, .large p:last-child {
+    margin-left: 22px;
+}
+
+.cartItem div:first-of-type {
+    margin-right: 4px;
+}
+.total {
+    margin: 0 auto;
+    width: 22%;
+}
+
+.total p {
+    display: inline;
+}
+
+.total p:first-child {
+    margin-right: 130px;
+}
+
+.cartItem div {
+    cursor: default;
+}
+
+.centeredBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.checkoutBtn {
+    border: 1px solid black;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.3em;
+}
+
+.payment p {
+    display: inline;
+    margin-right: 15px;
+}
+
+.payment {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.payment input {
+    width: 15%;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.payment input:focus {
+    outline: none;
+}
+
+.paymentSection button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.3em;
+    border: 1px solid black;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.paymentMessage {
+    text-align: center;
+}
+
+@media (min-width: 960px) {
+    .pizzas {
+        display: flex;
+    }
+
+    .small_pizza, .medium_pizza, .large_pizza {
+        flex: 1;
+    }
+}

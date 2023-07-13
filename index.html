@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <h1>Perfect Pizza</h1>
+    <div class="cart" x-data="pizzaCart">
+        <div class="cartSection" x-show="open">
+            <div class="cartArea">
+                <h2>Shopping Cart</h2>
+                <div class="cartItem small">
+                    <p>Small Pizza</p>
+                    <div x-on:click="smallIncrement">+</div>
+                    <div x-on:click="smallDecrement">-</div>
+                    <p x-text="smallTotal.toFixed(2)">0</p>
+                </div>
+                <div class="cartItem medium">
+                    <p>Medium Pizza</p>
+                    <div x-on:click="mediumIncrement">+</div>
+                    <div x-on:click="mediumDecrement">-</div>
+                    <p x-text="mediumTotal.toFixed(2)">0</p>
+                </div>
+                <div class="cartItem large">
+                    <p>Large Pizza</p>
+                    <div x-on:click="largeIncrement">+</div>
+                    <div x-on:click="largeDecrement">-</div>
+                    <p x-text="largeTotal.toFixed(2)">0</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p x-text="total.toFixed(2)">0</p>
+                </div>
+            </div>
+            <p class="paymentMessage" x-show="paymentMsgShow" x-text="paymentMessage"></p>
+            <div class="paymentSection" x-show="paymentShow">
+                <div class="payment">
+                    <p>Payment amount:</p>
+                    <input type="text" x-model="paymentAmount">
+                </div>
+                <div class="centeredBtn">
+                    <button @click="pay">Pay Now</button>
+                </div>
+            </div>
+            <div class="centeredBtn">
+                <button class="checkoutBtn" @click="checkout" x-show="checkoutHide">Checkout</button>
+            </div>
+        </div>
+
+        <div class="pizzas">
+            <div class="pizza small_pizza">
+                <h2>Small Pizza</h2>
+                <img src="images/pizza-one.png" alt="" width="125">
+                <h3>R49.00</h3>
+                <p>Chicken, mushroom, sweet bell pepper, onion, Tikka sauce, spring onion</p>
+                <div class="flexBuyBtns">
+                    <button class="buyBtn" @click="smallBuy">Buy</button>
+                </div>
+            </div>
+            <div class="pizza medium_pizza">
+                <h2>Medium Pizza</h2>
+                <img src="images/pizza-two.png" alt="" width="150">
+                <h3>R89.00</h3>
+                <p>Ground beef, green chilli, green pepper, onion, Mexican sauce</p>
+                <div class="flexBuyBtns">
+                    <button class="buyBtn" @click="mediumBuy">Buy</button>
+                </div>
+            </div>
+            <div class="pizza large_pizza">
+                <h2>Large Pizza</h2>
+                <img src="images/pizza-three.png" alt="" width="175">
+                <h3>R129.00</h3>
+                <p>Chicken, green pepper, pineapple, sweet & sour sauce</p>
+                <div class="flexBuyBtns">
+                    <button class="buyBtn" @click="largeBuy">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pizza contact_us">
+        <h2>Contact details</h2>
+        Contact us at: 011 636 7373 / info@perfectpizza.co.za
+        <script src="main.js"></script>
+</body>
+
+</html>
